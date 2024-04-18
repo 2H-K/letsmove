@@ -4,7 +4,8 @@ module hello_move::hello_move {
 
 }
 */
-module hello_move::hello_2H_K {//我id是2H-K但连字符是非法字符会报错，所以用_代替。
+module hello_move::hello_2H_K {//My ID is 2H-K but the hyphen is an illegal character and it gives an error, so I use _ instead
+
     use std::ascii::{String, string};
     use sui::object::{Self,UID};
     use sui::transfer::transfer;
@@ -16,7 +17,8 @@ module hello_move::hello_2H_K {//我id是2H-K但连字符是非法字符会报�
     }
 
     fun init(ctx: &mut TxContext) {
-        let hello_move = Hello_2H_K {//我id是2H-K但连字符是非法字符会报错，所以用_代替。
+        let hello_move = Hello_2H_K {//My ID is 2H-K but the hyphen is an illegal character and it gives an error, so I use _ instead
+
             id:object::new(ctx),
             say: string(b"hello 2H-K"),
         };
